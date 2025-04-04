@@ -8,7 +8,7 @@ let board = [
   ["", "", ""],
 ];
 
-let currentPlayer = "X";
+let currentPlayer = "E";
 let xMoves = [];
 let oMoves = [];
 let gameOver = false;
@@ -42,7 +42,7 @@ function handleMove(e) {
 
   const move = { row, col };
 
-  if (currentPlayer === "X") {
+  if (currentPlayer === "E") {
     xMoves.push(move);
     if (xMoves.length > 3) {
       const old = xMoves.shift();
@@ -63,7 +63,7 @@ function handleMove(e) {
     return;
   }
 
-  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  currentPlayer = currentPlayer === "E" ? "A" : "E";
   turnInfo.textContent = `Sıra: ${currentPlayer}`;
 }
 
